@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="static/style.css">
     <title>Alzheimer Disease Classification - Login</title>
 </head>
 <body>
-    <h2 class='heading'>Welcome to Alzheimer Disease Classification</h2>
-    <div class="container">
-        <!-- <img src="brain.png" alt="image" height="64px" width="64px"> -->
-        <div class="sub_con1">
-            <!-- for Image of brain -->
-            <h5>Alzheimer Disease Classification</h5>
-            <h1>Login Here</h1>
-        </div>
-        <div>
-            <form class="form" action="post">
-                <label for="uname">Username</label><br>
-                <input type="text" id="uname" name="uname"><br>
-                <label for="password">Password</label><br>
-                <input type="password" id="password" name="password"><br>
-                <input type="submit" id="submit" value="Login">
-            </form>
-        </div>
-    </div>
+    <div class="w-screen h-screen flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
+        <form method="post" class="p-10 bg-white rounded-lg flex justify-center items-center flex-col drop-shadow-xl">
+			<p class="mb-5 text-xl normal-case text-black">Alzheimer Disease Classification</p>
+			<img src="../static/brain.png" class="w-20 h-20 text-gray-600 mb-2" viewbox="0 0 20 20" fill="currentColor">
+			<p class="mb-5 text-3xl normal-case text-gray-600">Master Login</p>
+			<input type="username" name="username" class="mb-5 p-3 w-80 focus:border-gray-700 rounded border-2 outline-none" autocomplete="off" placeholder="Username" required>
+			<input type="password" name="password" class="mb-5 p-3 w-80 focus:border-gray-700 rounded border-2 outline-none" autocomplete="off" placeholder="Password" required>
+			<button class="transition-all duration-200 bg-blue-600 hover:bg-blue-900 text-white font-bold p-2 rounded w-80" id="login" type="submit"><span>Login</span></button>
+		</form>
+	</div>
 </body>
+
+<script>
+	document.getElementById("login").addEventListener("click", function(event){
+  	event.preventDefault();
+	});
+</script>
+
 </html>
